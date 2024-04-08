@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create product</title>
+</head>
+<body>
+<form action="#" th:action="@{/product-create}" th:object="${product}" method="post">
+    <label for="place">Place</label>
+    <input type="text" th:field="*{place}" id="place" placeholder="Place">
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Name">
+    <label for="datebeg">Date Beginning</label>
+    <input type="text" th:field="*{datebeg}" id="datebeg" placeholder="Beginning">
+    <label for="dateend">Date Ending</label>
+    <input type="text" th:field="*{dateend}" id="dateend" placeholder="Ending">
+    <input type="submit" value="Create product">
+</form>
+</body>
+</html>

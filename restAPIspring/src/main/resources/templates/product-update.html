@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Create product</title>
+</head>
+<body>
+<form action="#" th:action="@{/product-update}" th:object="${product}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="place">Place</label>
+    <input type="text" th:field="*{place}" id="place" placeholder="place">
+    <br/>
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="name">
+    <br/>
+    <label for="name">Date Beginning</label>
+    <input type="text" th:field="*{datebeg}" id="datebeg" placeholder="DateBeg">
+    <br/>
+    <label for="name">Date Ending</label>
+    <input type="text" th:field="*{dateend}" id="dateend" placeholder="DateEnd">
+    <br/>
+    <input type="submit" value="Update Product">
+</form>
+</body>
+</html>
